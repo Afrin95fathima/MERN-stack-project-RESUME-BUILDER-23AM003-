@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  position: relative;
+  min-height: 60px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: white;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+  position: relative;
+  height: 36px;
+}
+
+.input:focus {
+  border-color: #239ce2;
+  box-shadow: 0 0 0 2px rgba(35, 156, 226, 0.2);
+}
+
+.input:hover {
+  border-color: #adadad;
+}
+
+.input[type="date"] {
+  padding: 6px 16px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+/* Prevent autofill background color change */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
